@@ -45,6 +45,7 @@ body {
 .section {
     padding: 50px 80px;
     text-align: center;
+  
 }
 .section-light {
     background-color: #f4f4f4;
@@ -79,8 +80,6 @@ footer {
     padding: 2rem 0 1rem 0;
     background-color: rgba(21, 36, 35, 0.781);
 }
-
-/* Nav*/
 #navbar {
     overflow: hidden;
     background-color: #333;
@@ -101,3 +100,55 @@ footer {
     width: 100%;
     z-index: 1000;
 }
+
+.container {
+    width: 350px;
+    height: 500px;
+    perspective: 800px;
+    position: center;
+    margin-left: 27rem;
+  }
+  
+  .container:hover > .card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+    position: center;
+  }
+  
+  .card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+  }
+  
+  .front,
+  .back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(223, 253, 90, 0.856);
+    position: absolute;
+    backface-visibility: hidden;
+   
+  }
+  
+  .front {
+    background-image: url(./p1.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-size: 150%;
+
+    
+  }
+  
+  .back {
+    background-color: #1111116b;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
